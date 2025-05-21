@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/screens/welcome/welcome_screen.dart';
+import 'package:flutter_application_2/themes/styles.dart';
 
 void main() {
   runApp(
     MaterialApp(
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue),
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("LaserCut App"),
-          backgroundColor: Colors.green,
-        ),
-        body: Center(child: Text("Hello world")),
-      ),
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.lightTheme,
+      // theme: AppTheme.darkTheme,
+      home: WelcomeScreen(), // Change this to your initial screen
     ),
   );
 }
